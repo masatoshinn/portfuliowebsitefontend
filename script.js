@@ -18,11 +18,11 @@ function updateTime() {
     const timeDisplay = document.getElementById('local-time');
     if (timeDisplay) {
         const now = new Date();
-        timeDisplay.textContent = now.toLocaleTimeString('bn-BD', {
+        timeDisplay.textContent = now.toLocaleTimeString('en-US', {
             timeZone: 'Asia/Dhaka',
             hour: '2-digit', 
             minute: '2-digit',
-            hour12: true // AM/PM সহ দেখানোর জন্য true, ২৪-ঘণ্টা ফরম্যাটের জন্য false দিন
+            hour12: false // AM/PM সহ দেখানোর জন্য true, ২৪-ঘণ্টা ফরম্যাটের জন্য false দিন
         });
     }
 }
