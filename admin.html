@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <h2 id="gateTitle">Admin</h2>
+    <p id="gateHint"></p>
+    <form id="gateForm">
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="gatePassword" autocomplete="current-password" required>
+      </div>
+      <p id="gateError" style="color:#E5484D;font-size:13px;"></p>
+      <button type="submit" class="btn btn-primary" id="gateSubmit" style="width:100%;justify-content:center;"></button>
+    </form>
+    <p style="font-size:12px;margin-top:14px;">This password is stored only in this browser. There is no server — if you clear browser data, you'll set a new one next time.</p>
+  </div>
+</div>
+
+<div id="panel" style="display:none;">
+  <div class="admin-topbar">
+    <div class="container">
+      <div class="admin-brand">/admin</div>
+      <div class="admin-actions">
+        <button class="btn btn-ghost" id="viewSiteBtn" type="button">view site</button>
+        <button class="btn btn-ghost" id="exportBtn" type="button">export json</button>
+        <button class="btn btn-ghost" id="importBtn" type="button">import json</button>
+        <input type="file" id="importInput" accept="application/json">
+        <button class="btn btn-ghost" id="resetBtn" type="button">reset</button>
+        <button class="btn btn-primary" id="saveBtn" type="button">save changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:28px;">
+    <div class="admin-section">
+      <h2>Profile</h2>
+      <p class="hint">Your name, bio, contact info and social links — shown across the site.</p>
+      <div id="profileForm"></div>
+    </div>
+
+    <div class="admin-section">
+      <h2>Tech Stack</h2>
+      <p class="hint">Skills or tools shown as chips in the stack.yaml section.</p>
+      <div id="stackList"></div>
+    </div>
+
+    <div class="admin-section">
+      <h2>Services</h2>
+      <p class="hint">What you offer — shown as cards in services.json.</p>
+      <div id="servicesList"></div>
+    </div>
+
+    <div class="admin-section">
+      <h2>Projects</h2>
+      <p class="hint">Your portfolio work — shown in projects.json.</p>
+      <div id="projectsList"></div>
+    </div>
+
+    <div class="admin-section">
+      <h2>Client Reviews</h2>
+      <p class="hint">Testimonials — shown in reviews.log. Leave empty to hide.</p>
+      <div id="testimonialsList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

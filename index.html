@@ -1,13 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adrian Hajdin | Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="tabbar">
+  <div class="tabbar-inner">
+    <div class="tab-brand" id="brandInitial">GS</div>
+    <a class="tab active" data-section href="#home"><span class="dot"></span>home.md</a>
+    <a class="tab" data-section href="#about"><span class="dot"></span>about.md</a>
+    <a class="tab" data-section href="#stack"><span class="dot"></span>stack.yaml</a>
+    <a class="tab" data-section href="#services"><span class="dot"></span>services.json</a>
+    <a class="tab" data-section href="#projects"><span class="dot"></span>projects.json</a>
+    <a class="tab" data-section href="#reviews"><span class="dot"></span>reviews.log</a>
+    <a class="tab" data-section href="#contact"><span class="dot"></span>contact.sh</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span></span><span></span><span></span>
+        <div class="path">~/portfolio</div>
+      </div>
+      <div class="terminal-body">
+        <span class="prompt">$</span> <span class="cmd">whoami</span><br>
+        <span id="terminalWho"></span><span class="cursor"></span>
+      </div>
+    </div>
+    <h1 class="hero-name" id="heroName"></h1>
+    <div class="hero-role" id="heroRole"></div>
+    <p class="hero-tagline" id="heroTagline"></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#projects">view projects</a>
+      <a class="btn btn-ghost" href="#contact">get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">01 / about.md</div>
+      <h2 class="section-title">About</h2>
+    </div>
+    <div class="about-grid">
+      <img id="aboutAvatar" src="" alt="avatar">
+      <div>
+        <p id="aboutBio"></p>
+        <div class="about-meta">
+          <div><b id="aboutLocation"></b>Location</div>
+          <div><b id="aboutEmail"></b>Email</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">02 / stack.yaml</div>
+      <h2 class="section-title">Tech Stack</h2>
+    </div>
+    <div class="stack-grid" id="stackGrid"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">03 / services.json</div>
+      <h2 class="section-title">What I Do</h2>
+    </div>
+    <div class="grid-3" id="servicesGrid"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">04 / projects.json</div>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="grid-2" id="projectsGrid"></div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">05 / reviews.log</div>
+      <h2 class="section-title">Client Reviews</h2>
+    </div>
+    <div class="grid-3" id="testimonialsGrid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">06 / contact.sh</div>
+      <h2 class="section-title">Let's Talk</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p style="color:var(--text-muted)">Have a project in mind, or just want to say hi? Reach out directly.</p>
+        <ul class="contact-list">
+          <li><a id="contactEmail" href="#"></a></li>
+          <li><span id="contactLocation"></span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="social-row" id="socialRow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="year"></span> · Built with HTML/CSS/JS · <a href="admin.html">admin</a></div>
+</footer>
+
+<script src="data.js"></script>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
 </html>
