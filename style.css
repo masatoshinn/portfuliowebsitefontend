@@ -78,6 +78,7 @@ header {
     padding: 2rem 5rem 0 18rem;   
     width: 100%;
     height: 100vh;
+    height: 100svh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -530,39 +531,6 @@ header {
     background: linear-gradient(135deg, #ff1744, #ff5252);
 }
 
-@media (max-width: 1024px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .contact-content {
-        flex-direction: column;
-    }
-    .home {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        text-align: center;
-    }
-    .home-img img {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .about-info2 {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-}
-
 .fade-in-element {
     opacity: 0;
     transform: translateY(20px);
@@ -625,6 +593,37 @@ header {
 
 .slide-menu.active {
     right: 0; 
+}
+
+.menu-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.menu-close:hover {
+    color: #00bfff;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 @media screen and (max-width: 768px) {

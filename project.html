@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mostofa.</title>
+    <title>Projects — Mostofa</title>
+    <meta name="description" content="Tools and projects built by Mostofa — web apps, dashboards, and UI experiments.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects — Mostofa">
+    <meta property="og:description" content="Tools and projects built by Mostofa — web apps, dashboards, and UI experiments.">
+    <meta property="og:image" content="images/cp.png">
+    <link rel="icon" type="image/png" href="images/faveicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300..800&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,30 +21,32 @@
         <div class="logo">
             <h3><span>m</span>ostofa.</h3>
         </div>
-<div class="menu-toggle" id="menu-toggle">
-    <i class="fa-solid fa-bars"></i>
-</div>
+        <div class="menu-toggle" id="menu-toggle" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
         <ul class="header-list">
             <li><a href="index.html" class="fade-link" data-link>Home</a></li>
             <li><a href="about.html" class="fade-link" data-link>About</a></li>
-            <li><a href="project.html" class="fade-link" data-link>Projectes</a></li>
+            <li><a href="project.html" class="fade-link" data-link>Projects</a></li>
             <li><a href="contact.html" class="fade-link" data-link>Contact</a></li>
         </ul>
         <ul class="header-list-icon">
-            <li><a href="https://instagram.com/cz.mostofa"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://github.com/masatoshinn"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="https://fb.com/cz.mostofax"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://instagram.com/cz.mostofa" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://github.com/masatoshinn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://fb.com/cz.mostofax" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
         </ul>
     </header>
-<div class="slide-menu" id="slide-menu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</div>
+    <div class="slide-menu" id="slide-menu">
+        <button class="menu-close" id="menu-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <section class="project">
         <div class="title-project">
@@ -50,7 +58,7 @@
             <ul class="list-tools">
                 <li><a href="#"><i class="fa-brands fa-html5"></i> Html</a></li>
                 <li><a href="#"><i class="fa-brands fa-css3-alt"></i> Css</a></li>
-                <li><a href="#"><i class="fa-solid fa-c"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-c"></i> C</a></li>
                 <li><a href="#"><i class="fa-brands fa-java"></i> Java</a></li>
                 <li><a href="#"><i class="fa-brands fa-php"></i> Php</a></li>
                 <li><a href="#"><i class="fa-brands fa-python"></i> Python</a></li>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la images Portfolio5-main 2>/dev/null; echo \"---\"; head -20 styles.css; echo \"---git---\"; git log --oneline -5; git status --short | head -30)",
+      "Bash(git rm script.js styles.css >/dev/null && git rm -r Portfolio5-main >/dev/null && ls)",
+      "Bash(node --check main.js && echo \"main.js OK\"; npx --yes serve -v >/dev/null 2>&1; echo done)",
+      "Bash(node --check main.js && echo \"JS syntax OK\"; grep -rn \"Projectes\\\\|facebbok\\\\|Poppins:wght\\\\|menu-overlay\\\\|menu-close\" --include=\"*.html\" . | grep -v images; grep -c \"og:title\" index.html about.html project.html contact.html; grep -n \"href=\\\\\"#\\\\\"\" index.html | head -3)",
+      "Bash(grep -rn \"script.js\\\\|styles.css\\\\|Poortfolio5\" --include=\"*.html\" --include=\"*.js\" --include=\"*.css\" . ; git status --short; echo \"---\"; git diff --stat HEAD | tail -5)"
+    ]
+  }
+}
